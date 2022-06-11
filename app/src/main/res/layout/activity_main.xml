@@ -4,196 +4,726 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#FDFDFD">
+    android:background="#FDFDFD"
+    tools:context=".Activities.MainActivity"
+    tools:ignore="MissingClass">
+
+
+    <include
+        layout="@layout/calendar"
+        android:id="@+id/calendarLayout"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarLayout"
+        android:textAlignment="center">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:columnCount="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:backgroundTint="#333A87FD"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/cardIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/cyclist" />
+
+                    <TextView
+                        android:id="@+id/cardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardIcon"
+                        android:fontFamily="@font/velasans_bold"
+                        android:text="Велопрогулка"
+                        android:textColor="#3C3C43"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardTitle"
+                        android:layout_toEndOf="@id/cardIcon"
+                        android:fontFamily="@font/velasans_regular"
+                        android:text="Вся неделя, 25 мин"
+                        android:textColor="#663C3C43"
+                        android:textSize="11sp" />
+
+
+                    <ImageView
+                        android:id="@+id/playButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/ic_play" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_toEndOf="@id/playButton"
+                        android:progress="20"
+                        android:progressTint="#3C3C43"
+                        android:thumb="@drawable/seek_bar_thumb" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#33FECB3E"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/cardIcon1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/gymnast" />
+
+                    <TextView
+                        android:id="@+id/cardTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardIcon1"
+                        android:fontFamily="@font/velasans_bold"
+                        android:text="Занятия йогой"
+                        android:textColor="#3C3C43"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardTitle1"
+                        android:layout_toEndOf="@id/cardIcon1"
+                        android:fontFamily="@font/velasans_regular"
+                        android:text="Сегодня, 25 мин"
+                        android:textColor="#663C3C43"
+                        android:textSize="11sp" />
+
+
+                    <ImageView
+                        android:id="@+id/playButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/ic_play" />
+
+                    <SeekBar
+                        android:id="@+id/progressBar1"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_toEndOf="@id/playButton1"
+                        android:progress="20"
+                        android:progressTint="#3C3C43"
+                        android:thumb="@drawable/seek_bar_thumb" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#33FE6250"
+                app:cardCornerRadius="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/cardIcon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/smoke" />
+
+                    <TextView
+                        android:id="@+id/cardTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardIcon2"
+                        android:fontFamily="@font/velasans_bold"
+                        android:text="Бросить курить"
+                        android:textColor="#3C3C43"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardTitle2"
+                        android:layout_toEndOf="@id/cardIcon2"
+                        android:fontFamily="@font/velasans_regular"
+                        android:text="Сегодня, весь день"
+                        android:textColor="#663C3C43"
+                        android:textSize="11sp" />
+
+
+                    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:grid="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/counter"
+                        android:columnCount="4">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:background="@drawable/counter_item"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="2"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="3"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                    </GridLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="175dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#3396D35F"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/cardIcon3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/mashrum" />
+
+                    <TextView
+                        android:id="@+id/cardTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardIcon3"
+                        android:fontFamily="@font/velasans_bold"
+                        android:text="Правильно питаться"
+                        android:textColor="#3C3C43"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardTitle3"
+                        android:layout_toEndOf="@id/cardIcon3"
+                        android:fontFamily="@font/velasans_regular"
+                        android:text="Сегодня, весь день"
+                        android:textColor="#663C3C43"
+                        android:textSize="11sp" />
+
+
+                    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:grid="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/counter"
+                        android:columnCount="4">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:background="@drawable/counter_item"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="2"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="3"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                    </GridLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:backgroundTint="#333A87FD"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/cardIcon4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/cyclist" />
+
+                    <TextView
+                        android:id="@+id/cardTitle4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardIcon4"
+                        android:fontFamily="@font/velasans_bold"
+                        android:text="Велопрогулка"
+                        android:textColor="#3C3C43"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardTitle4"
+                        android:layout_toEndOf="@id/cardIcon4"
+                        android:fontFamily="@font/velasans_regular"
+                        android:text="Вся неделя, 25 мин"
+                        android:textColor="#663C3C43"
+                        android:textSize="11sp" />
+
+
+                    <ImageView
+                        android:id="@+id/playButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/ic_play" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar4"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_toEndOf="@id/playButton4"
+                        android:progress="20"
+                        android:progressTint="#3C3C43"
+                        android:thumb="@drawable/seek_bar_thumb" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#33FECB3E"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/cardIcon5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/gymnast" />
+
+                    <TextView
+                        android:id="@+id/cardTitle5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardIcon5"
+                        android:fontFamily="@font/velasans_bold"
+                        android:text="Занятия йогой"
+                        android:textColor="#3C3C43"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardTitle5"
+                        android:layout_toEndOf="@id/cardIcon5"
+                        android:fontFamily="@font/velasans_regular"
+                        android:text="Сегодня, 25 мин"
+                        android:textColor="#663C3C43"
+                        android:textSize="11sp" />
+
+
+                    <ImageView
+                        android:id="@+id/playButton5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/ic_play" />
+
+                    <SeekBar
+                        android:id="@+id/progressBar5"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_toEndOf="@id/playButton5"
+                        android:progress="20"
+                        android:progressTint="#3C3C43"
+                        android:thumb="@drawable/seek_bar_thumb" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="175dp"
+                android:layout_columnWeight="1"
+                android:backgroundTint="#33FE6250"
+                app:cardCornerRadius="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="100dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/cardIcon6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/smoke" />
+
+                    <TextView
+                        android:id="@+id/cardTitle6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardIcon6"
+                        android:fontFamily="@font/velasans_bold"
+                        android:text="Бросить курить"
+                        android:textColor="#3C3C43"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardTitle6"
+                        android:layout_toEndOf="@id/cardIcon6"
+                        android:fontFamily="@font/velasans_regular"
+                        android:text="Сегодня, весь день"
+                        android:textColor="#663C3C43"
+                        android:textSize="11sp" />
+
+
+                    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:grid="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/counter"
+                        android:columnCount="4">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:background="@drawable/counter_item"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="2"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="3"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                    </GridLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="175dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#3396D35F"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="14dp">
+
+                    <ImageView
+                        android:id="@+id/cardIcon7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/mashrum" />
+
+                    <TextView
+                        android:id="@+id/cardTitle7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cardIcon7"
+                        android:fontFamily="@font/velasans_bold"
+                        android:text="Правильно питаться"
+                        android:textColor="#3C3C43"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardTitle7"
+                        android:layout_toEndOf="@id/cardIcon7"
+                        android:fontFamily="@font/velasans_regular"
+                        android:text="Сегодня, весь день"
+                        android:textColor="#663C3C43"
+                        android:textSize="11sp" />
+
+
+                    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:grid="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/counter"
+                        android:columnCount="4">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="0"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:background="@drawable/counter_item"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="2"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:fontFamily="@font/velasans_semibold"
+                            android:text="3"
+                            android:textAlignment="center"
+                            android:textColor="#3C3C43"
+                            android:textSize="12sp" />
+
+                    </GridLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="#0077FF"
+        android:src="@drawable/ic_plus_button" />
+
+    <View
+        android:id="@+id/popupView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="220dp"
+        android:layout_toStartOf="@id/floatingActionButton" />
 
 
     <LinearLayout
+        android:id="@+id/menuLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"
+        android:background="@drawable/menu">
 
-        <LinearLayout
+
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="30dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:background="@drawable/ic_menu_news" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="7"
-                android:textAlignment="center"
-                android:textColor="#0077FF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ПН"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="30dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:background="@drawable/ic_menu_main" />
 
-            <TextView
-                android:layout_width="26dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle"
-                android:text="8"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:textAlignment="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ВТ"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="30dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="9"
-                android:textAlignment="center"
-                android:textColor="#0077FF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:textAlignment="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ПН"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="30dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:textAlignment="center"
-                android:textColor="#0077FF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ЧТ"
-                android:textAlignment="center"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="30dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="11"
-                android:textAlignment="center"
-                android:textColor="#0077FF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ПТ"
-                android:textAlignment="center"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="30dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12"
-                android:textAlignment="center"
-                android:textColor="#0077FF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="СБ"
-                android:textAlignment="center"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="0dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="13"
-                android:textAlignment="center"
-                android:textColor="#0077FF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="ВС"
-                android:textAlignment="center"
-                android:textSize="13sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_menu_lk" />
 
     </LinearLayout>
-
-
 
 
 </RelativeLayout>

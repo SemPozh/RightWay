@@ -1,14 +1,15 @@
-package com.example.rightway;
+package com.example.rightway.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.rightway.CustomTextWatcher;
+import com.example.rightway.R;
 
 public class LoginActivity extends AppCompatActivity {
 

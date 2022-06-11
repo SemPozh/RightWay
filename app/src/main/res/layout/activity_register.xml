@@ -36,10 +36,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:fontFamily="@font/velasans_extrabold"
-            android:text="Авторизация"
+            android:text="Регистрация"
             android:textAlignment="center"
             android:textColor="#3C3C43"
             android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Войти"
+            android:textColor="#0077FF"
+            android:fontFamily="@font/velasans_semibold"
+            android:layout_alignParentEnd="true"/>
 
         <EditText
             android:id="@+id/loginEditText"
@@ -78,7 +86,7 @@
             android:background="@drawable/button_inactive"
             android:fontFamily="@font/velasans_extrabold"
             android:paddingVertical="8dp"
-            android:text="Войти"
+            android:text="Зарегестрироваться"
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="18sp" />

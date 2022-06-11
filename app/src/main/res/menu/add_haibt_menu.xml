@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/newGoalItem"
+        android:title="Новая привычка">
+    </item>
+    <item
+        android:id="@+id/newTemplateItem"
+        android:title="Создать шаблон">
+    </item>
+    <item
+        android:id="@+id/addTemplateItem"
+        android:title="Добавить шаблон">
+    </item>
+</menu>

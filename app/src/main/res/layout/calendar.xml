@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <LinearLayout
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center_horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -17,15 +17,18 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/mondayDate"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7"
-                android:textAlignment="center"
                 android:textColor="#0077FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ПН"
@@ -41,18 +44,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="26dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/circle"
-                android:text="8"
+                android:id="@+id/tuesdayDate"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="8"
+                android:textColor="#0077FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:textAlignment="center"
-                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ВТ"
                 android:textSize="13sp"
@@ -67,16 +71,18 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/wednesdayDate"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9"
-                android:textAlignment="center"
                 android:textColor="#0077FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ПН"
@@ -92,19 +98,21 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/thursdayDate"
+                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10"
-                android:textAlignment="center"
                 android:textColor="#0077FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:text="ЧТ"
-                android:textAlignment="center"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -117,19 +125,21 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/fridayDate"
+                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11"
-                android:textAlignment="center"
                 android:textColor="#0077FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ПТ"
-                android:textAlignment="center"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -142,19 +152,21 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/saturdayDate"
+                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12"
-                android:textAlignment="center"
                 android:textColor="#0077FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="СБ"
-                android:textAlignment="center"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -167,26 +179,22 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/sundayDate"
+                android:textAlignment="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13"
-                android:textAlignment="center"
                 android:textColor="#0077FF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ВС"
-                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
                 android:textSize="13sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
-
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</LinearLayout>
