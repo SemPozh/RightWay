@@ -42,43 +42,56 @@
             android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/loginEditText"
+            android:id="@+id/emailEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="54dp"
             android:layout_below="@id/titleTextView"
             android:layout_marginBottom="12dp"
             android:background="@drawable/edit_text_default"
-            android:hint="Введите логин"
-            android:inputType="text"
+            android:hint="Введите почту"
+            android:inputType="textEmailAddress"
             android:padding="12dp"
             android:paddingRight="15dp"
             android:textCursorDrawable="@drawable/cursor_color"
             android:drawableEnd="@drawable/ic_cross"/>
 
+
         <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/loginEditText"
-            android:layout_marginBottom="24dp"
+            android:layout_height="54dp"
+            android:layout_below="@+id/emailEditText"
             android:background="@drawable/edit_text_default"
+            android:drawableEnd="@drawable/ic_visibility"
             android:hint="Введите пароль"
             android:inputType="textPassword"
             android:padding="12dp"
             android:paddingRight="15dp"
-            android:drawableEnd="@drawable/ic_visibility"
             android:textCursorDrawable="@drawable/cursor_color" />
+
+        <TextView
+            android:id="@+id/authErrorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordEditText"
+            android:layout_marginBottom="11dp"
+            android:fontFamily="@font/velasans_bold"
+            android:textAlignment="center"
+            android:textColor="#E64646"
+            android:textSize="13sp"
+            android:visibility="invisible" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/authButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/passwordEditText"
+            android:layout_below="@+id/authErrorTextView"
             android:layout_marginBottom="12dp"
             android:background="@drawable/button_inactive"
             android:fontFamily="@font/velasans_extrabold"
             android:paddingVertical="8dp"
             android:text="Войти"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="18sp" />

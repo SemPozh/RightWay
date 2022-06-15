@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "991894599812",
+    "project_id": "rightway-d91a4",
+    "storage_bucket": "rightway-d91a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991894599812:android:850e27864a9ffe6e602ad1",
+        "android_client_info": {
+          "package_name": "com.example.rightway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991894599812-o9611tn8ei1dr6afe76clfjdm53gqo7o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rightway",
+            "certificate_hash": "97acb536cf75c18b1bce205cf87d2b330dacae9a"
+          }
+        },
+        {
+          "client_id": "991894599812-99uk9c7f8mtrcn9qeaemsege2diajemf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqwIv68lnx4yuv4ptciVVT_u84O_fcd84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991894599812-99uk9c7f8mtrcn9qeaemsege2diajemf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

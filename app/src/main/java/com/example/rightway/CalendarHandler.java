@@ -10,7 +10,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class CalendarHolder {
+public class CalendarHandler {
     TextView mondayDate;
     TextView tuesdayDate;
     TextView wednesdayDate;
@@ -19,7 +19,7 @@ public class CalendarHolder {
     TextView saturdayDate;
     TextView sundayDate;
 
-    public CalendarHolder(TextView mondayDate, TextView tuesdayDate, TextView wednesdayDate, TextView thursdayDate, TextView fridayDate, TextView saturdayDate, TextView sundayDate) {
+    public CalendarHandler(TextView mondayDate, TextView tuesdayDate, TextView wednesdayDate, TextView thursdayDate, TextView fridayDate, TextView saturdayDate, TextView sundayDate) {
         this.mondayDate = mondayDate;
         this.tuesdayDate = tuesdayDate;
         this.wednesdayDate = wednesdayDate;

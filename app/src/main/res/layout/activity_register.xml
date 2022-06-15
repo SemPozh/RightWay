@@ -21,20 +21,12 @@
         android:elevation="20dp">
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="-10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/ic_back_arrow" />
 
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="17dp"
             android:fontFamily="@font/velasans_extrabold"
             android:text="Регистрация"
             android:textAlignment="center"
@@ -42,22 +34,25 @@
             android:textSize="24sp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Войти"
-            android:textColor="#0077FF"
-            android:fontFamily="@font/velasans_semibold"
-            android:layout_alignParentEnd="true"/>
-
-        <EditText
-            android:id="@+id/loginEditText"
+            android:layout_below="@id/titleTextView"
+            android:id="@+id/emailError"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/titleTextView"
+            android:fontFamily="@font/velasans_bold"
+            android:textAlignment="center"
+            android:textColor="#E64646"
+            android:textSize="13sp"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_below="@id/emailError"
             android:layout_marginBottom="12dp"
             android:background="@drawable/edit_text_default"
-            android:hint="Введите логин"
-            android:inputType="text"
+            android:hint="Введите почту"
+            android:inputType="textEmailAddress"
             android:padding="12dp"
             android:paddingRight="15dp"
             android:textCursorDrawable="@drawable/cursor_color"
@@ -66,27 +61,39 @@
         <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/loginEditText"
-            android:layout_marginBottom="24dp"
+            android:layout_height="54dp"
+            android:layout_below="@+id/emailEditText"
             android:background="@drawable/edit_text_default"
+            android:drawableEnd="@drawable/ic_visibility"
             android:hint="Введите пароль"
             android:inputType="textPassword"
             android:padding="12dp"
             android:paddingRight="15dp"
-            android:drawableEnd="@drawable/ic_visibility"
             android:textCursorDrawable="@drawable/cursor_color" />
+
+        <TextView
+            android:id="@+id/passwordError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordEditText"
+            android:layout_marginBottom="11dp"
+            android:fontFamily="@font/velasans_bold"
+            android:textAlignment="center"
+            android:textColor="#E64646"
+            android:textSize="13sp"
+            android:visibility="invisible" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/authButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/passwordEditText"
+            android:layout_below="@+id/passwordError"
             android:layout_marginBottom="12dp"
             android:background="@drawable/button_inactive"
             android:fontFamily="@font/velasans_extrabold"
             android:paddingVertical="8dp"
-            android:text="Зарегестрироваться"
+            android:text="Продолжить"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="18sp" />
@@ -96,7 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/authButton"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="21dp"
             android:drawableEnd="@drawable/vk_id"
             android:paddingHorizontal="35dp"
             android:background="@drawable/vk_id_button"
@@ -110,9 +117,21 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/haveAnAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/authVkButton"
+            android:layout_below="@+id/authVkButton"
+            android:layout_marginBottom="21dp"
+            android:fontFamily="@font/velasans_semibold"
+            android:text="У меня уже есть аккаунт"
+            android:textAlignment="center"
+            android:textColor="#0077FF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/haveAnAccount"
             android:fontFamily="@font/velasans_medium"
             android:text="@string/terms_of_use"
             android:textAlignment="center"

@@ -3,6 +3,7 @@ package com.example.rightway.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,9 +15,11 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import com.example.rightway.CalendarHolder;
+import com.example.rightway.CalendarHandler;
 import com.example.rightway.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,8 +35,19 @@ public class MainActivity extends AppCompatActivity {
     TextView sundayDate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseAuth.getInstance().signOut();
+        if (user==null){
+            Intent intent = new Intent(MainActivity.this, StartActivity.class);
+            startActivity(intent);
+        }
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         floatingActionButton = findViewById(R.id.floatingActionButton);
 
@@ -52,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
         sundayDate = findViewById(R.id.sundayDate);
 
 
-        CalendarHolder calendarHolder = new CalendarHolder(mondayDate, tuesdayDate, wednesdayDate, thursdayDate, fridayDate, saturdayDate, sundayDate);
-        calendarHolder.setCalendar();
+        CalendarHandler calendarHandler = new CalendarHandler(mondayDate, tuesdayDate, wednesdayDate, thursdayDate, fridayDate, saturdayDate, sundayDate);
+        calendarHandler.setCalendar();
 
 
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +77,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
+    @Override
+    public void onBackPressed() {}
 
 
     private void showPopupMenu(View v){

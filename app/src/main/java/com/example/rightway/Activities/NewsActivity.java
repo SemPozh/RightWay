@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.example.rightway.CalendarHolder;
+import com.example.rightway.CalendarHandler;
 import com.example.rightway.R;
 
 
@@ -23,7 +23,7 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        CalendarHolder calendarHolder = new CalendarHolder(mondayDate, tuesdayDate, wednesdayDate, thursdayDate, fridayDate, saturdayDate, sundayDate);
-        calendarHolder.setCalendar();
+        CalendarHandler calendarHandler = new CalendarHandler(mondayDate, tuesdayDate, wednesdayDate, thursdayDate, fridayDate, saturdayDate, sundayDate);
+        calendarHandler.setCalendar();
     }
 }
